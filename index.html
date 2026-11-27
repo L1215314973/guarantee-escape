@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff8f3">
+  <meta name="description" content="一份很会躲的保证书，一场关于信任的小小考验。">
+  <title>保证书逃生计划 · 一份很会躲的保证书</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="background-art" aria-hidden="true">
+    <span class="doodle doodle-flower">✳</span><span class="doodle doodle-spark">✧</span>
+    <div class="side-note note-left">绝密文件<br><span>请温柔对待</span><i>♡</i></div>
+    <div class="side-note note-right">我只是个<br>害羞的文件呀<div class="doodle-face">·ᴗ·</div></div>
+    <span class="doodle doodle-heart">♡</span><span class="doodle doodle-star">✦</span>
+    <span class="dotted-orbit orbit-one"></span><span class="dotted-orbit orbit-two"></span>
+  </div>
+
+  <header class="site-header">
+    <button class="brand" id="brand" aria-label="保证书逃生计划">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="18" rx="4" stroke="currentColor" stroke-width="1.8"/><path d="m5 10 11 8 11-8M5 24l7-7m15 7-7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M14 5c0-2 3-2 3 0 0-2 3-2 3 0s-3 4-3 4-3-2-3-4" fill="currentColor"/></svg></span>
+      <span class="brand-copy"><strong>保证书逃生计划</strong><span>一份很会躲的保证书</span></span>
+    </button>
+    <nav class="tools" aria-label="体验设置">
+      <button class="icon-button" id="sound-toggle" aria-label="关闭音效" title="关闭音效" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path class="sound-waves" d="M16 8c2 2 2 6 0 8m3-11c4 4 4 10 0 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path class="sound-cross" d="m17 10 4 4m0-4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+      <button class="icon-button" id="motion-toggle" aria-label="减弱动效" title="减弱动效" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m13 3-7 10h5l-1 8 8-11h-5l1-7Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+    </nav>
+  </header>
+
+  <div class="stage-meta"><span class="meta-line"></span><span id="stage-caption">一场关于信任的小小考验</span><span class="meta-line"></span><div class="attempt-counter" aria-label="本轮尝试查看次数"><span>已尝试</span><strong id="attempt-count">00</strong><span>次</span></div></div>
+
+  <main id="playground" aria-label="保证书互动区域">
+    <article class="promise-card" id="card" aria-labelledby="card-title">
+      <div class="card-content"><p>正在取出一份非常认真的保证书……</p></div>
+    </article>
+  </main>
+
+  <button id="prank-float" class="prank-float" hidden><span class="tiny-envelope" aria-hidden="true">✉</span><span id="prank-float-label">保证书在这里</span><span class="float-dot" aria-hidden="true">!</span></button>
+
+  <footer class="site-footer"><span id="footer-hint">认真是假的，可爱是真的。</span><button id="restart-button" hidden>重新开始</button></footer>
+  <div class="confetti-field" id="confetti" aria-hidden="true"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="sr-only" id="announcement" aria-live="polite" aria-atomic="true"></div>
+
+  <dialog id="prank-dialog" aria-labelledby="prank-title">
+    <div class="prank-dialog-body">
+      <button class="dialog-close icon-button" id="prank-close" aria-label="关闭彩蛋">×</button>
+      <div class="prank-scroll">
+      <span class="eyebrow">最后，再皮一下</span>
+      <h2 id="prank-title">骗你的，<br>其实什么也没有</h2>
+      <div class="prank-picture"><span id="prank-emoji" role="img" aria-label="搞怪表情">🤪</span><img id="prank-image" alt="" hidden></div>
+      <p>好啦，这回真的没有了。</p>
+      </div>
+      <button class="button button-primary" id="prank-forgive">好吧，原谅你了</button>
+    </div>
+  </dialog>
+  <noscript><div class="noscript">这个互动需要开启 JavaScript。开启后刷新，就能和保证书玩躲猫猫啦。</div></noscript>
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
